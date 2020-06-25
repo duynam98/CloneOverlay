@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_name_text"
+        tools:context=".ui.activity.cropImage.CropImageActivity">
+
+        <View
+            android:id="@+id/toolbarView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:layout_marginLeft="@dimen/size_16"
+            android:src="@drawable/quantum_ic_clear_white_24"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarView" />
+
+        <ImageView
+            android:id="@+id/img_done"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:layout_marginLeft="@dimen/size_16"
+            android:layout_marginRight="@dimen/size_16"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarView" />
+
+        <TextView
+            android:id="@+id/tv_crop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crop"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarView"
+            app:layout_constraintEnd_toStartOf="@id/img_done"
+            app:layout_constraintStart_toEndOf="@id/img_cancel"
+            app:layout_constraintTop_toTopOf="@id/toolbarView" />
+
+        <ImageView
+            android:id="@+id/layout_crop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toTopOf="@id/viewBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarView"
+            app:layout_constraintWidth_percent="0.8"></ImageView>
+
+        <com.duynam.cloneoverlay.ui.cropview.HorizontalProgressWheelView
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_80"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

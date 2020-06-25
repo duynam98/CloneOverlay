@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Overlay</string>
+    <string name="menu_home_setting">Setting</string>
+    <string name="menu_home_store">Store</string>
+    <string name="menu_home_gallery">Gallery</string>
+    <string name="menu_home_camera">Camera</string>
+    <string name="crop">Crop</string>
+</resources>
